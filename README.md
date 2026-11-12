@@ -10,29 +10,35 @@
 
 公開用のHTML・CSS・JavaScript・画像は shimaneko-summer/ に配置しています。ゲーム本編は開発中で、LPはゲームの紹介ページです。
 
-## ゲーム画面の更新（2026-10-18）
+## LPの作り替え（2026-11-12）
 
-`shimaneko-summer/assets/` のゲーム画面5点を、開発プロジェクト `app_neko/unity/captures/` の最新の風景キャプチャからWebP（1280×720、quality 88）に変換して差し替えました。
+ゲームの企画と画面が大きく変わったため、LPを作り替えました。内容は開発プロジェクト `app_neko` の `CLAUDE.md`・`requirements.md`（v0.18）に合わせています。
 
-| 掲載画像 | 元キャプチャ | 撮影日時（日本時間） |
-| --- | --- | --- |
-| overview.webp | island_neighbourhood_compact_overview.png | 2026-10-18 14:26 |
-| harbour.webp | island_shore_harbour.png | 2026-10-18 09:56 |
-| lane.webp | island_neighbourhood_lane.png | 2026-10-18 14:26 |
-| shrine.webp | island_shrine_front.png | 2026-10-18 14:26 |
-| beach.webp | island_shore_beach.png | 2026-10-18 09:56 |
+- 物語：都会で飼われている猫が、家族と瀬戸内の島の祖父母の家へ帰省し、ゲーム内の8月1日〜31日を過ごす
+- 構成：トップ（渡船の着く港）、コンセプト、祖父母の家、31日間、3つの過ごし方、動物と話せる猫と島の人、島の風景9か所、ゲーム情報、FAQ、素材クレジット
+- ゲーム情報：本編は Steam（Windows）買い切り予定、体験版はPC・スマホのブラウザで無料予定（猫の家から港まで）
+- 画像はすべて開発中のゲーム画面。以前のAI生成のトップ画像と旧画面10点は削除し、作品一覧のサムネイルもトップ画像に差し替え
 
-風景切り替え・拡大表示でも同じ更新画像を使用します。画像URLとJavaScriptに更新用クエリを付け、以前のキャッシュが残る場合にも差し替えを反映します。トップと作品一覧の `hero-shrine-cat.png` はゲーム画面ではないイメージビジュアルのため、そのまま掲載しています。
-
-## 人と動物の登場シーン（2026-10-18）
-
-「島で出会う、いつもの顔。」を追加し、港の島民・よろず屋の店先・三毛猫・港の犬と猫の4シーンを掲載しました。元画像は同じ開発プロジェクトの2026-10-18 09:44撮影の実機キャプチャです。各画像は拡大表示に対応します。
+画像は `app_neko/.claude/worktrees/island-map-03a3ac/unity/captures/rebuild/` の島の作り直し版キャプチャ（1440×900、2026-11-11〜12撮影）を WebP（quality 84）に変換したものです。
 
 | 掲載画像 | 元キャプチャ |
 | --- | --- |
-| cast-quay.webp | cast_quay.png |
-| cast-shop.webp | cast_shop.png |
-| cast-cat-shop.webp | cast_cat_shop.png |
-| cast-cats-quay.webp | cast_cats_quay.png |
-
-変換設定は風景画像と同じWebP（1280×720、quality 88）です。
+| hero-ferry.webp | ferry/ferry_alongside.png |
+| home-house.webp | trial/trial_cat_house.png |
+| home-living.webp | home_reference_living.png |
+| home-engawa.webp | home_reference_entry.png |
+| home-veranda.webp | trial/trial_veranda.png |
+| way-shop.webp | house_14_exterior.png |
+| way-lookout.webp | lookout_restored.png |
+| people-shrine.webp | shrine_reference_sea.png |
+| people-orchard.webp | orchard_path.png |
+| cat-schoolyard.webp | school_paw_contact.png |
+| place-island.webp | island_seaward.png |
+| place-harbour.webp | harbour_morning.png |
+| place-lane.webp | village_entrances.png |
+| place-shop.webp | house_14_interior.png |
+| place-shrine.webp | shrine_reference_court.png |
+| place-school.webp | reference_school.png |
+| place-paddies.webp | irregular_paddies.png |
+| place-islet.webp | islet_reference_high_tide.png |
+| place-cave.webp | cave_cliff_overview.png |

@@ -1,9 +1,13 @@
 const places = {
-  overview: {image:'overview', alt:'穏やかな海に浮かぶ、森と集落と港がある小さな島の全景', text:'森から港まで、島ぜんぶが遊び場。今日は、どこから歩こう。', label:'島全体'},
-  harbour: {image:'harbour', alt:'青い海に面した岸壁と浮桟橋に漁船が並ぶ島の漁港', text:'潮のにおいと、漁船の気配。港には気になるものがいっぱい。', label:'漁港'},
-  lane: {image:'lane', alt:'瓦屋根の木造家屋が軒を連ねる、猫目線で見た島の路地', text:'石垣の上も、家と家のすきまも。猫ならではの寄り道を探そう。', label:'路地と集落'},
-  shrine: {image:'shrine', alt:'石の鳥居と狛犬、瓦屋根の社殿が並ぶ神社の境内', text:'石段を登った先は、緑に囲まれた神社。木陰でちょっとひと休み。', label:'神社'},
-  beach: {image:'beach', alt:'夏空と穏やかな青い海に面した、白い砂浜', text:'波が静かに寄せる、西の浜。水ぎわには、こわごわ近づいて。', label:'西の浜'}
+  island: {image:'place-island', alt:'穏やかな海に浮かぶ、森と集落と港がある小さな島を沖から見た全景', text:'森と集落と港がある、小さな島。まわりには、重なり合う島影。', label:'島を見渡す'},
+  harbour: {image:'place-harbour', alt:'漁船が係留された朝の港の岸壁に立つ島の人たち', text:'渡船が着く、朝の港。岸壁には漁船と、島の人の姿。', label:'港と渡船'},
+  lane: {image:'place-lane', alt:'石垣と石段が続く坂の集落と、瓦屋根の家々', text:'石段と石垣が続く、坂の集落。家と家のすきまも、猫の近道。', label:'路地と石垣'},
+  shop: {image:'place-shop', alt:'お菓子やカップめん、缶詰が棚に並ぶ、よろず屋の店内', text:'お菓子にカップめん、缶詰。島の暮らしを支える、よろず屋の店内。', label:'よろず屋'},
+  shrine: {image:'place-shrine', alt:'狛犬と石灯籠、瓦屋根の社殿がある神社の境内と、島の人たち', text:'森の中の、静かな境内。狛犬と社殿のそば、木陰ではセミの声。', label:'神社'},
+  school: {image:'place-school', alt:'松林に囲まれた丘の上の、木造の校舎と校庭', text:'丘の上の木造校舎と校庭。夏休みのあいだは、ひっそり。', label:'島の学校'},
+  paddies: {image:'place-paddies', alt:'海に面した斜面に、段々に並ぶ田んぼと畦道', text:'海に面した、段々の田んぼ。トンボやカエルを追いかけに。', label:'段々の田んぼ'},
+  islet: {image:'place-islet', alt:'浅い海の先に浮かぶ、祠のある小さな島と、海中に続く砂州', text:'沖の小さな島へは、潮が引いたときだけ砂州がつながる。', label:'小島と砂州'},
+  cave: {image:'place-cave', alt:'森の下の海岸に広がる岩場と、海へ開く洞窟', text:'岩場の先には、海へ開く洞窟。潮だまりにも、何かいそう。', label:'磯と洞窟'}
 };
 const tabs = [...document.querySelectorAll('[data-place]')];
 const panel = document.querySelector('#island-panel');
@@ -13,7 +17,7 @@ function selectPlace(tab) {
   const place = places[tab.dataset.place];
   tabs.forEach(item => {const selected = item === tab; item.setAttribute('aria-selected', String(selected)); item.tabIndex = selected ? 0 : -1;});
   panel.setAttribute('aria-labelledby', tab.id);
-  islandImage.src = `assets/${place.image}.webp?v=20261018`;
+  islandImage.src = `assets/${place.image}.webp`;
   islandImage.alt = place.alt;
   document.querySelector('#place-description').textContent = place.text;
   enlarge.dataset.lightbox = islandImage.getAttribute('src');
